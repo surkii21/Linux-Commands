@@ -1,0 +1,38 @@
+Task 1.1: Create the directory
+Command: mkdir test_dir
+Explanation:The mkdir command creates a directory. This command creates test_dir inside your current working directory.
+Verification: ls -d test_dir
+Expected output:test_dir
+
+Task 1.2: Create an empty file inside the directory
+Commands: cd test_dir
+touch example.txt
+Explanation:cd test_dir changes your working directory to test_dir.
+touch example.txt creates an empty file named example.txt, provided that the file does not already exist.
+Verification:ls
+wc -c < example.txt
+Expected output:example.txt
+
+Task 1.3: Rename the file
+Command: mv example.txt renamed_example.txt
+Explanation:The mv command moves or renames files. Here, the first argument is the existing filename, and the second is the new filename. Because both names refer to the same directory, the file is renamed without changing its location.
+Verification:ls
+wc -c < renamed_example.txt
+Expected output:renamed_example.txt
+
+Complete command sequence
+Run these commands once, in order, starting from the directory where you want to create test_dir:
+
+bash
+mkdir test_dir
+cd test_dir
+touch example.txt
+ls
+mv example.txt renamed_example.txt
+ls
+wc -c < renamed_example.txt
+Expected final result
+text
+test_dir/
+└── renamed_example.txt
+After successful execution, test_dir contains the empty file renamed_example.txt, and the original name example.txt no longer exists.
