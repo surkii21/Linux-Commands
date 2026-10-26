@@ -1,3 +1,4 @@
+👉 Task 1 : Creating and Renaming Files/Directories
 Task 1.1: Create the directory
 Command: mkdir test_dir
 Explanation:The mkdir command creates a directory. This command creates test_dir inside your current working directory.
@@ -23,7 +24,7 @@ Expected output:renamed_example.txt
 Complete command sequence
 Run these commands once, in order, starting from the directory where you want to create test_dir:
 
-bash
+bash👇 T1
 mkdir test_dir
 cd test_dir
 touch example.txt
@@ -36,3 +37,77 @@ text
 test_dir/
 └── renamed_example.txt
 After successful execution, test_dir contains the empty file renamed_example.txt, and the original name example.txt no longer exists.
+
+👉 Task 2 : Viewing File Contents
+Task 2.1: Display the entire file using cat
+Command: cat /etc/passwd
+Explanation:The cat command reads the specified file and prints its contents to the terminal. Here, it displays all lines in /etc/passwd.
+Expected result:The terminal displays the complete contents of /etc/passwd.
+
+Task 2.2: Display the first five lines using head
+Command:head -n 5 /etc/passwd
+Explanation:head displays the beginning of a file.
+-n 5 limits the output to the first five lines.
+/etc/passwd specifies the file to read.
+Expected result:The terminal displays only the first five lines of /etc/passwd.
+
+Task 2.3: Display the last five lines using tail
+Command:tail -n 5 /etc/passwd
+Explanation:tail displays the end of a file.
+-n 5 limits the output to the last five lines.
+/etc/passwd specifies the file to read.
+Expected result:The terminal displays only the last five lines of /etc/passwd.
+
+Complete Command Sequence
+bash👇 T2
+cat /etc/passwd
+head -n 5 /etc/passwd
+tail -n 5 /etc/passwd
+
+👉 Task 3. Searching for Patterns
+Task 3.1: Use grep to find all lines containing the word “root” in /etc/passwd.
+Command:grep 'root' /etc/passwd
+Explanation: grep searches a file for a specified pattern and displays each matching line.
+'root' is the pattern to search for.
+/etc/passwd is the file being searched.
+This command displays the entire line whenever root appears anywhere within it, not just the matching text.
+
+👉 Task 4. Zipping and Unzipping.
+Task 4.1: Compress the Directory Using zip
+Command: zip -r test_dir.zip test_dir
+Explanation:'zip' creates a ZIP archive.
+'-r' includes the directory and its contents recursively, including any subdirectories.
+'test_dir.zip' is the archive name.
+'test_dir' is the directory to compress.
+
+Task 4.2: Extract the Archive into unzipped_dir
+Commands:mkdir unzipped_dir
+unzip test_dir.zip -d unzipped_dir
+Explanation:'mkdir unzipped_dir' creates the new destination directory.
+'unzip test_dir.zip' extracts the ZIP archive.
+'-d unzipped_dir' specifies where to extract its contents. The directory structure stored in the archive is preserved.
+
+👉 Task 5. Downloading Files.
+10.	Use wget to download a file from a URL (e.g., https://example.com/sample.txt).
+
+👉 Task 6. . Changing Permissions
+Task 6.1: Create the File
+Command: touch secure.txt
+Explanation:The touch command creates an empty file named secure.txt in your current directory if it does not already exist. If it already exists, touch updates its timestamps without clearing its contents.
+
+Task 6.2: Set Read-Only Permissions
+Command: chmod 444 secure.txt
+Explanation:The chmod command changes file permissions. The value 444 gives read permission only to the owner, group, and all other users, removing their write and execute permissions.
+
+👉 Task 7. Working with Environment Variables
+Task 7.1: Set the Environment Variable
+Command: export MY_VAR='Hello, Linux!'
+Explanation: export makes the variable available to programs and child processes launched from the current shell.
+MY_VAR is the variable’s name.
+'Hello, Linux!' is its value. Use straight single quotes as shown to preserve the spaces and exclamation mark literally.
+Do not add spaces around the = sign.
+
+Task 7.2: Verify the Variable
+Command:printenv MY_VAR
+Expected Output:Hello, Linux!
+The printenv command displays the value of the specified environment variable, confirming that it was exported successfully
